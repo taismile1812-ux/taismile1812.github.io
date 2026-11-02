@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio học tập và năng lực chuyên môn ngành Sư phạm Âm nhạc.">
+  <title>Portfolio | [Họ và tên]</title>
+  <style>
+    :root {
+      --navy: #183153;
+      --navy-2: #29496d;
+      --ink: #263449;
+      --muted: #64748b;
+      --paper: #ffffff;
+      --soft: #f1f5f9;
+      --line: #e2e8f0;
+      --accent: #b9cbe0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #f8fafc;
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    .container { width: min(1080px, 88%); margin: 0 auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    .nav {
+      min-height: 72px; display: flex; align-items: center;
+      justify-content: space-between; gap: 20px;
+    }
+    .brand {
+      color: var(--navy); font-size: 1.05rem; font-weight: 800;
+      letter-spacing: .08em; text-decoration: none; white-space: nowrap;
+    }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .nav-links a {
+      text-decoration: none; color: #475569; font-size: .9rem;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .hero {
+      background: linear-gradient(120deg, #edf2f8, #f8fafc 72%);
+      padding: 92px 0 84px;
+    }
+    .hero-inner {
+      display: grid; grid-template-columns: 1.5fr .7fr;
+      align-items: center; gap: 55px;
+    }
+    .eyebrow {
+      color: var(--navy-2); font-size: .78rem; font-weight: 800;
+      letter-spacing: .16em; text-transform: uppercase;
+    }
+    h1 {
+      color: var(--navy); font-size: clamp(2.5rem, 6vw, 4.4rem);
+      line-height: 1.08; margin: 18px 0;
+    }
+    .hero-lead { max-width: 650px; color: var(--muted); font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button {
+      display: inline-block; padding: 11px 19px; border-radius: 7px;
+      background: var(--navy); color: white; text-decoration: none;
+      font-size: .92rem; font-weight: 700;
+    }
+    .button.secondary {
+      background: transparent; color: var(--navy); border: 1px solid #9aadc4;
+    }
+    .photo-placeholder {
+      width: min(250px, 100%); aspect-ratio: 1;
+      border-radius: 50%; margin: auto; display: grid; place-items: center;
+      background: linear-gradient(145deg, #dce6f1, #b9cbe0);
+      color: var(--navy); border: 9px solid rgba(255,255,255,.8);
+      box-shadow: 0 18px 45px rgba(24,49,83,.12);
+      text-align: center; padding: 25px; font-weight: 700;
+    }
+    .photo-placeholder span { font-size: .85rem; font-weight: 500; }
+    section { padding: 76px 0; scroll-margin-top: 78px; }
+    section:nth-of-type(even) { background: #fff; }
+    .section-kicker {
+      color: #718096; font-size: .75rem; font-weight: 800;
+      letter-spacing: .15em; text-transform: uppercase;
+    }
+    h2 { color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.35rem); margin: 7px 0 25px; }
+    .intro { max-width: 780px; color: var(--muted); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .card {
+      background: var(--paper); border: 1px solid var(--line);
+      border-radius: 13px; padding: 25px;
+    }
+    .card h3 { color: var(--navy); margin-bottom: 8px; font-size: 1.08rem; }
+    .card p, .card li { color: var(--muted); font-size: .96rem; }
+    .card ul { padding-left: 20px; margin-top: 10px; }
+    .school { margin-top: 25px; border-left: 3px solid var(--accent); }
+    .school .period { color: #718096; font-size: .85rem; margin-bottom: 7px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .tag {
+      background: #edf2f8; color: #345477; border: 1px solid #dce6f1;
+      border-radius: 30px; padding: 7px 13px; font-size: .88rem;
+    }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .project-number { color: #8ba2bd; font-weight: 800; letter-spacing: .1em; font-size: .8rem; }
+    .project-type { color: #718096; font-size: .82rem; margin: 7px 0; }
+    .project-note { margin-top: 12px; font-size: .86rem !important; }
+    .contact-box {
+      background: var(--navy); color: white; border-radius: 16px;
+      padding: 35px;
+    }
+    .contact-box h2 { color: white; }
+    .contact-box p { color: #d5dfeb; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 17px; }
+    .contact-links a { color: white; text-decoration: underline; text-underline-offset: 4px; }
+    footer { padding: 25px 0; text-align: center; color: #718096; font-size: .85rem; }
+    @media (max-width: 760px) {
+      .nav { padding: 15px 0; align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 10px 16px; }
+      .hero { padding: 65px 0; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 35px; }
+      .hero-lead { margin: auto; }
+      .hero-actions { justify-content: center; }
+      .two-col, .project-grid { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Điều hướng chính">
+    <a class="brand" href="#home">MY PORTFOLIO.</a>
+    <div class="nav-links">
+      <a href="#about">Giới thiệu</a>
+      <a href="#education">Học vấn</a>
+      <a href="#skills">Năng lực</a>
+      <a href="#teaching">Sản phẩm</a>
+      <a href="#contact">Liên hệ</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-inner container">
+      <div>
+        <p class="eyebrow">Music Education Portfolio</p>
+        <h1>Xin chào,<br>mình là [Họ và tên].</h1>
+        <p class="hero-lead">
+          Sinh viên ngành Sư phạm Âm nhạc tại Trường Đại học Sư phạm Nghệ thuật Trung ương.
+          Đây là không gian giới thiệu hành trình học tập, năng lực chuyên môn và những sản phẩm
+          mình đã thực hiện trong quá trình học tập.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#teaching">Khám phá sản phẩm</a>
+          <a class="button secondary" href="#about">Tìm hiểu về mình</a>
+        </div>
+      </div>
+      <div class="photo-placeholder">
+        <div>ẢNH ĐẠI DIỆN<br><span>Thay bằng ảnh của bạn</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <p class="section-kicker">01 / About me</p>
+      <h2>Giới thiệu bản thân</h2>
+      <p class="intro">
+        Mình quan tâm đến âm nhạc và giáo dục âm nhạc, đặc biệt là việc kết hợp kiến thức,
+        cảm thụ và thực hành âm nhạc trong hoạt động dạy học. Mình mong muốn từng bước phát triển
+        tư duy sư phạm, khả năng tổ chức hoạt động học tập và năng lực sáng tạo trong giảng dạy.
+      </p>
+      <div class="two-col" style="margin-top:24px">
+        <article class="card">
+          <h3>Định hướng học tập</h3>
+          <p>
+            Củng cố kiến thức âm nhạc, rèn luyện kỹ năng chuyên môn và vận dụng phương pháp
+            dạy học phù hợp với mục tiêu, nội dung và đối tượng học sinh.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Mục tiêu phát triển</h3>
+          <p>
+            Xây dựng phong cách làm việc nghiêm túc, chủ động học hỏi và phát triển năng lực
+            trở thành người giáo viên âm nhạc có chuyên môn và tinh thần sáng tạo.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <p class="section-kicker">02 / Education</p>
+      <h2>Quá trình học tập</h2>
+      <article class="card school">
+        <p class="period">[Năm bắt đầu] – [Hiện tại]</p>
+        <h3>Trường Đại học Sư phạm Nghệ thuật Trung ương</h3>
+        <p>Ngành học: Sư phạm Âm nhạc</p>
+        <p style="margin-top:10px">
+          Nội dung học tập và rèn luyện: kiến thức âm nhạc, kỹ năng thực hành,
+          phương pháp dạy học âm nhạc và nghiệp vụ sư phạm.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <p class="section-kicker">03 / Professional skills</p>
+      <h2>Năng lực và kỹ năng</h2>
+      <p class="intro">
+        Đây là các nhóm năng lực gợi ý. Hãy giữ lại những nội dung phản ánh đúng khả năng
+        và trải nghiệm thực tế của bạn.
+      </p>
+      <div class="two-col" style="margin-top:24px">
+        <article class="card">
+          <h3>Năng lực âm nhạc</h3>
+          <ul>
+            <li>Thanh nhạc và biểu diễn âm nhạc: [bổ sung mức độ / nội dung]</li>
+            <li>Nhạc cụ: [ghi rõ nhạc cụ bạn học hoặc sử dụng]</li>
+            <li>Lý thuyết âm nhạc và đọc nhạc</li>
+            <li>Cảm thụ, phân tích tác phẩm âm nhạc</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Năng lực sư phạm</h3>
+          <ul>
+            <li>Xây dựng kế hoạch bài dạy</li>
+            <li>Thiết kế hoạt động học tập âm nhạc</li>
+            <li>Xây dựng hệ thống câu hỏi định hướng</li>
+            <li>Ứng dụng công nghệ trong dạy học</li>
+          </ul>
+        </article>
+      </div>
+      <div class="tags" aria-label="Kỹ năng bổ trợ">
+        <span class="tag">Giao tiếp</span>
+        <span class="tag">Làm việc nhóm</span>
+        <span class="tag">Sáng tạo</span>
+        <span class="tag">Thuyết trình</span>
+        <span class="tag">Tin học văn phòng</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <div class="container">
+      <p class="section-kicker">04 / Teaching & academic works</p>
+      <h2>Sản phẩm học tập tiêu biểu</h2>
+      <p class="intro">
+        Trưng bày những sản phẩm có thể chứng minh quá trình học tập và cách bạn vận dụng
+        kiến thức chuyên ngành. Có thể bổ sung ảnh, video, PDF hoặc đường dẫn tới từng sản phẩm.
+      </p>
+      <div class="project-grid" style="margin-top:24px">
+        <article class="card">
+          <p class="project-number">PROJECT 01</p>
+          <h3>Thiết kế giáo án khám phá tác phẩm “Tiến quân ca”</h3>
+          <p class="project-type">Giáo dục âm nhạc · Thiết kế bài dạy</p>
+          <p>
+            Xây dựng hoạt động khám phá tác phẩm, định hướng học sinh nhận biết nhịp 2/4,
+            sắc thái hào hùng, trang nghiêm và ý nghĩa lịch sử của tác phẩm.
+          </p>
+          <p class="project-note">Minh chứng: [Thêm PDF giáo án / hình ảnh hoạt động]</p>
+        </article>
+        <article class="card">
+          <p class="project-number">PROJECT 02</p>
+          <h3>[Tên sản phẩm hoặc dự án tiếp theo]</h3>
+          <p class="project-type">[Học phần / lĩnh vực]</p>
+          <p>
+            [Mô tả ngắn mục tiêu, phần việc bạn thực hiện và kết quả đạt được.]
+          </p>
+          <p class="project-note">Minh chứng: [Thêm ảnh / video / tài liệu]</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities">
+    <div class="container">
+      <p class="section-kicker">05 / Activities & achievements</p>
+      <h2>Hoạt động và thành quả</h2>
+      <div class="two-col">
+        <article class="card">
+          <h3>Hoạt động học thuật và nghệ thuật</h3>
+          <p>[Bổ sung chương trình biểu diễn, hoạt động ngoại khóa, làm việc nhóm hoặc hoạt động chuyên môn.]</p>
+        </article>
+        <article class="card">
+          <h3>Chứng nhận và thành tích</h3>
+          <p>[Bổ sung chứng chỉ, giấy chứng nhận, giải thưởng hoặc thành tích nếu có.]</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <p class="section-kicker" style="color:#b9cbe0">06 / Contact</p>
+        <h2>Kết nối với mình</h2>
+        <p>Cảm ơn bạn đã dành thời gian tìm hiểu Portfolio của mình.</p>
+        <div class="contact-links">
+          <a href="mailto:[email-cua-ban]">Email</a>
+          <a href="[duong-dan-facebook]" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 [Họ và tên] · Music Education Portfolio
+</footer>
+
+</body>
+</html>
