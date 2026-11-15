@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tổng kết quá trình xây dựng Portfolio học phần Công nghệ số - Sư phạm Âm nhạc">
+  <title>Tổng kết | Nguyễn Hữu Tài</title>
+  <style>
+    :root{--navy:#143459;--muted:#607694;--border:#dbe4ee;--bg:#f5f8fc;--white:#fff;--accent:#eaf1f8}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);font-family:Arial,"Segoe UI",sans-serif;color:var(--navy);line-height:1.7}
+    a{color:inherit}
+    .topbar{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
+    .nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:17px 25px;gap:16px}
+    .brand{text-decoration:none;letter-spacing:1px;font-weight:800;font-size:17px}
+    .navlinks{display:flex;flex-wrap:wrap;gap:24px}
+    .navlinks a{text-decoration:none;font-size:14px;color:var(--muted)}
+    .navlinks a.active,.navlinks a:hover{color:var(--navy);font-weight:700}
+    main{max-width:1100px;margin:0 auto;padding:52px 24px 72px}
+    .eyebrow{font-size:13px;color:#4076a4;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+    h1{font-size:clamp(30px,4vw,43px);line-height:1.25;margin:12px 0 14px}
+    .lead{max-width:780px;color:var(--muted);font-size:16px;margin:0 0 33px}
+    .panel{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:26px 28px;margin-bottom:22px;box-shadow:0 1px 2px rgba(18,49,83,.025)}
+    h2{font-size:22px;line-height:1.35;margin:0 0 16px}
+    h3{font-size:17px;margin:0 0 6px}
+    p{margin:0 0 13px}
+    p:last-child{margin-bottom:0}
+    ul{margin:0;padding-left:22px}
+    li{margin:7px 0}
+    .hint{border-left:3px solid #79a4c9;padding:11px 14px;background:#f1f6fb;border-radius:4px;color:#3b6488}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .project{display:block;text-decoration:none;border:1px solid var(--border);border-radius:12px;padding:19px 20px;background:#fff;transition:box-shadow .15s,border-color .15s}
+    .project:hover{border-color:#8aa8c5;box-shadow:0 4px 12px rgba(20,52,89,.07)}
+    .number{font-size:12px;letter-spacing:1.2px;font-weight:800;color:#427198}
+    .project h3{margin:7px 0;font-size:18px}
+    .project p{color:var(--muted);font-size:14px}
+    .project strong{font-size:14px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+    .button{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:10px 17px;border-radius:9px;font-size:14px;font-weight:700}
+    .button.outline{color:var(--navy);background:#fff;border:1px solid var(--border)}
+    footer{border-top:1px solid var(--border);background:#fff;color:var(--muted);font-size:13px}
+    .foot{max-width:1100px;margin:auto;padding:24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:650px){.nav{padding:15px 18px;align-items:flex-start;flex-direction:column}.navlinks{gap:17px}main{padding:34px 16px 48px}.panel{padding:20px 18px}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav">
+      <a class="brand" href="index.html">MY PORTFOLIO.</a>
+      <nav class="navlinks" aria-label="Điều hướng chính">
+        <a href="index.html">Trang chủ</a>
+        <a href="du-an.html">Dự án</a>
+        <a href="tong-ket.html" class="active" aria-current="page">Tổng kết</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="eyebrow">Học phần Công nghệ số · Conclusion</div>
+    <h1>Tổng kết quá trình xây dựng Portfolio</h1>
+    <p class="lead">Tổng hợp quá trình thực hiện sáu bài tập, những kiến thức và kỹ năng đã vận dụng, cùng việc tự đánh giá quá trình xây dựng Portfolio học tập.</p>
+
+    <section class="panel">
+      <h2>1. Trải nghiệm và cảm nhận cá nhân</h2>
+      <p>Trong quá trình thực hiện Portfolio, tôi sử dụng GitHub Pages để xây dựng website giới thiệu bản thân và trình bày sáu bài tập của học phần Công nghệ số. Công việc bao gồm tổ chức tệp, hoàn thiện báo cáo, chuẩn bị minh chứng và liên kết các tài liệu trên website.</p>
+      <!-- Người thực hiện: thay đoạn bên dưới bằng 2–3 câu cảm nhận do chính mình viết. -->
+      <p class="hint">[Viết cảm nhận thật của bạn: trải nghiệm khi lần đầu làm Portfolio, điều gì thay đổi trong cách học và mức độ tự tin sau khi hoàn thành.]</p>
+    </section>
+
+    <section class="panel">
+      <h2>2. Kiến thức và kỹ năng đã tiếp thu</h2>
+      <ul>
+        <li><strong>Quản lý dữ liệu:</strong> tổ chức thư mục, đặt tên tệp và sử dụng các thao tác cơ bản trên Windows.</li>
+        <li><strong>Nghiên cứu học thuật:</strong> tìm kiếm tài liệu, đánh giá độ tin cậy của nguồn và trích dẫn tham khảo.</li>
+        <li><strong>Khai thác AI:</strong> xây dựng và cải tiến Prompt, đánh giá kết quả do AI cung cấp.</li>
+        <li><strong>Hợp tác trực tuyến:</strong> phân công nhiệm vụ, tổng hợp biên bản và phối hợp nhóm qua công cụ họp trực tuyến.</li>
+        <li><strong>Sáng tạo nội dung số:</strong> kết hợp ChatGPT, Gemini và Canva để xây dựng học liệu nhạc lý.</li>
+        <li><strong>Liêm chính học thuật:</strong> kiểm chứng thông tin, ghi nhận việc sử dụng AI, bảo vệ dữ liệu và tôn trọng nguồn tài liệu.</li>
+        <li><strong>Xây dựng website:</strong> chỉnh sửa HTML, tải tệp lên GitHub và khắc phục lỗi liên kết trên GitHub Pages.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>3. Điểm tâm đắc và những thách thức</h2>
+      <h3>Điểm tâm đắc</h3>
+      <!-- Người thực hiện: thay đoạn bên dưới bằng ý kiến thực tế của chính mình. -->
+      <p class="hint">[Viết điều bạn tâm đắc nhất: ví dụ bộ học liệu số nhịp 2/4, 3/4, 4/4 hoặc việc tự xây dựng website và đưa tài liệu lên mạng.]</p>
+      <h3>Thách thức và cách giải quyết</h3>
+      <p>Trong quá trình xây dựng Portfolio, một số khó khăn đã phát sinh khi xuất bản GitHub Pages, chỉnh sửa các trang HTML và gắn liên kết đến tệp Word, PDF. Đặc biệt, tên tệp có phần mở rộng bị lặp đã khiến một số liên kết xuất hiện lỗi 404. Tôi đã kiểm tra tên tệp trên repository, điều chỉnh đường dẫn trong mã HTML và tải lại trang để khắc phục.</p>
+      <p>Việc thiết kế học liệu bằng Canva cũng đòi hỏi căn chỉnh bố cục và tỷ lệ hình minh họa, đồng thời kiểm tra lại kiến thức nhạc lý trước khi công bố sản phẩm.</p>
+    </section>
+
+    <section class="panel">
+      <h2>4. Sáu bài tập đã thực hiện</h2>
+      <div class="grid">
+        <a class="project" href="bai-01.html"><div class="number">BÀI TẬP 01</div><h3>Thao tác với tệp tin và thư mục</h3><p>Quản lý tệp trên Windows và minh chứng các thao tác.</p><strong>Xem bài tập →</strong></a>
+        <a class="project" href="bai-02.html"><div class="number">BÀI TẬP 02</div><h3>Tìm kiếm và đánh giá nguồn học thuật</h3><p>Tìm tài liệu, đánh giá độ tin cậy và trích dẫn.</p><strong>Xem bài tập →</strong></a>
+        <a class="project" href="bai-03.html"><div class="number">BÀI TẬP 03</div><h3>Viết Prompt hiệu quả</h3><p>Thử nghiệm ba tác vụ với các mức độ Prompt.</p><strong>Xem bài tập →</strong></a>
+        <a class="project" href="bai-04.html"><div class="number">BÀI TẬP 04</div><h3>Hợp tác trực tuyến</h3><p>Phối hợp nhóm, biên bản họp và sản phẩm liên quan.</p><strong>Xem bài tập →</strong></a>
+        <a class="project" href="bai-05.html"><div class="number">BÀI TẬP 05</div><h3>Sáng tạo nội dung bằng AI</h3><p>Học liệu số khám phá các loại nhịp cơ bản.</p><strong>Xem bài tập →</strong></a>
+        <a class="project" href="bai-06.html"><div class="number">BÀI TẬP 06</div><h3>Sử dụng AI có trách nhiệm</h3><p>Bộ tám nguyên tắc trong học tập và nghiên cứu.</p><strong>Xem bài tập →</strong></a>
+      </div>
+      <div class="actions">
+        <a class="button" href="du-an.html">Trở về trang Dự án</a>
+        <a class="button outline" href="index.html">Trang chủ</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot">
+      <span>© Nguyễn Hữu Tài · Portfolio học tập</span>
+      <span>Học phần Công nghệ số</span>
+    </div>
+  </footer>
+</body>
+</html>
